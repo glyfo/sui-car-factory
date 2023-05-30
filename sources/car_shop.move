@@ -25,7 +25,10 @@ module car::car_shop {
      struct ShopOwnerCap has key { id: UID }
 
     fun init(ctx: &mut TxContext) {
-        transfer::transfer(CarShop {id: object::new(ctx)}
+        transfer::transfer(CarShop {id: object::new(ctx),
+                                    price: 100,
+                                     balance: balance::zero() 
+                                   }
                            ,tx_context::sender(ctx));
         transfer::share_object(CarShop {
                                id: object::new(ctx),
