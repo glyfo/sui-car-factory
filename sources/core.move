@@ -3,7 +3,6 @@ module srv::core {
     use sui::tx_context::{Self, TxContext};
     use sui::transfer;
 
-    
     struct Car has key {
         id: UID,
         speed: u8,
@@ -24,4 +23,7 @@ module srv::core {
         let car = new(speed,acceleration,handling,ctx);
         transfer::transfer(car,tx_context::sender(ctx));
     }
+
+
+
 }
