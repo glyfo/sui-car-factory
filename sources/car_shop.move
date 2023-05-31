@@ -1,4 +1,4 @@
-module srv::car_shop {
+module srv::shop {
 
      use sui::transfer;
      use sui::sui::SUI;
