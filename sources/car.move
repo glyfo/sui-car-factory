@@ -1,4 +1,4 @@
-module car::car {
+module srv::car {
     use sui::object::{Self, UID};
     use sui::tx_context::{Self, TxContext};
     use sui::transfer;
