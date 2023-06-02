@@ -24,6 +24,4 @@ module srv::core {
         transfer::transfer(car,tx_context::sender(ctx));
     }
 
-
-
 }
